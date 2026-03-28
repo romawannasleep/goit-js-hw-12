@@ -21,6 +21,7 @@ form.addEventListener("submit", async (e) => {
     currentQuery = e.target.elements['search-text'].value.trim();
     currentPage = 1;
     clearGallery();
+    hideLoadMoreButton();
     showLoader();
     try{
         const data = await getImagesByQuery(e.target.elements['search-text'].value);
@@ -56,6 +57,7 @@ form.addEventListener("submit", async (e) => {
 });
 button.addEventListener('click', async () => {
     currentPage += 1;
+    hideLoadMoreButton();
     showLoader();
 
     try {
