@@ -7,12 +7,60 @@
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+@import url('./reset.css');
+@import url('./base.css');
+
+
+.loader.visible {
+  display: block;
+    width: 48px;
+    height: 48px;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    }
+.loader {
+  display: none;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+
+}
+li {
+  width: 300px;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.form {
+  display: block;
+  margin: 0, auto;
+  align-self: center;
+}
+.btn.visible {
+  width: 100px;
+  margin: 0, auto;
+  display: flex;
+  align-self: center;
+  
+}
+.btn {
+  display: none;
+}
