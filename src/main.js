@@ -75,6 +75,8 @@ button.addEventListener('click', async () => {
                 title: 'Info',
                 message: "We're sorry, but you've reached the end of search results.",
             });
+        } else {
+            showLoadMoreButton();
         }
     } catch (error) {
         iziToast.error({ title: 'Error', message: `${error}` });
